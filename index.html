@@ -11,9 +11,80 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./dist/style.css" />
+    <script defer src="./js/main.js"></script>
+
     <title>Password generator app</title>
   </head>
   <body>
-    Hello world
+    <main class="home">
+      <article class="passgen">
+        <h2 class="heading-m passgen__title">Password Generator</h2>
+        <div class="passgen__pass">
+          <p class="body passgen__text">PTx1f5DaFX</p>
+          <img
+            src="./assets/images/icon-copy.svg"
+            alt=""
+            class="passgen__icon"
+          />
+        </div>
+        <div class="passgen__body">
+          <div class="passgen__length">
+            <p class="body">Character Length</p>
+            <p class="heading-l">10</p>
+          </div>
+          <div class="slider">
+            <input
+              type="range"
+              min="1"
+              max="20"
+              value="10"
+              class="slider__input"
+              id="strength-slider"
+            />
+          </div>
+          <div class="passgen__checkboxes">
+            <div class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="checkbox-1" />
+              <label for="checkbox-1">Include Uppercase Letters</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="checkbox-2" />
+              <label for="checkbox-2">Include Lowercase Letters</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="checkbox-3" />
+              <label for="checkbox-3">Include Numbers</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="checkbox-4" />
+              <label for="checkbox-4">Include Symbols</label>
+            </div>
+          </div>
+          <div class="passgen__strength">
+            <p class="body">strength</p>
+            <div class="passgen__levels">
+              <div class="passgen__level"></div>
+              <div class="passgen__level"></div>
+              <div class="passgen__level"></div>
+              <div class="passgen__level"></div>
+            </div>
+          </div>
+          <button class="btn btn--icon">
+            Generate
+            <svg
+              class="btn__icon"
+              width="12"
+              height="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="currentcolor"
+                d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+              />
+            </svg>
+          </button>
+        </div>
+      </article>
+    </main>
   </body>
 </html>

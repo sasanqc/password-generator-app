@@ -1,3 +1,5 @@
 @use "../abstracts/" as *;
 .home {
+  margin: 0 auto;
+  max-width: rem(540);
 }

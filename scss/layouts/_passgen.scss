@@ -1,0 +1,121 @@
+@use "../abstracts/" as *;
+.passgen {
+  max-width: rem(540);
+  margin-top: rem(131);
+  display: block;
+
+  &__title {
+    margin-bottom: rem(31);
+    color: var(--clr-grey);
+    text-align: center;
+  }
+
+  &__pass {
+    @include flex-center;
+    background-color: var(--clr-dark-grey);
+    padding: rem(20) rem(32);
+    margin-bottom: rem(24);
+  }
+
+  &__body {
+    background-color: var(--clr-dark-grey);
+    padding: rem(24) rem(32);
+  }
+
+  &__length {
+    @include flex-center;
+    margin-bottom: rem(24);
+    & + .slider {
+      margin-bottom: rem(42);
+    }
+    & > .heading-l {
+      color: var(--clr-green);
+    }
+  }
+
+  &__strength {
+    background-color: var(--clr-very-dark-grey);
+    padding: rem(24) rem(32);
+    margin-bottom: rem(32);
+    @include flex-center;
+    .body {
+      color: var(--clr-grey);
+      text-transform: uppercase;
+    }
+  }
+
+  &__levels {
+    display: flex;
+    align-items: center;
+
+    &--1 {
+      &::before {
+        content: "too weak";
+        margin-right: rem(16);
+        text-transform: uppercase;
+      }
+      > :nth-child(1) {
+        background-color: var(--clr-red);
+        border-width: 0;
+      }
+    }
+    &--2 {
+      &::before {
+        content: "weak";
+        margin-right: rem(16);
+        text-transform: uppercase;
+      }
+      > :nth-child(1),
+      > :nth-child(2) {
+        background-color: var(--clr-orange);
+        border-width: 0;
+      }
+    }
+    &--3 {
+      &::before {
+        content: "medium";
+        margin-right: rem(16);
+        text-transform: uppercase;
+      }
+      > :nth-child(1),
+      > :nth-child(2),
+      > :nth-child(3) {
+        background-color: var(--clr-yellow);
+        border-width: 0;
+      }
+    }
+    &--4 {
+      &::before {
+        content: "strong";
+        margin-right: rem(16);
+        text-transform: uppercase;
+      }
+      > :nth-child(1),
+      > :nth-child(2),
+      > :nth-child(3),
+      > :nth-child(4) {
+        background-color: var(--clr-green);
+        border-width: 0;
+      }
+    }
+  }
+
+  &__level {
+    width: 10px;
+    height: 28px;
+    border: 2px solid var(--clr-almost-white);
+
+    &:first-child(1) {
+      margin-left: rem(16);
+    }
+    &:not(:first-child) {
+      margin-left: rem(8);
+    }
+  }
+  &__checkboxes {
+    :not(:last-child) {
+      margin-bottom: rem(19);
+    }
+    margin-bottom: rem(32);
+  }
+}

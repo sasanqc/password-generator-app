@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+.btn {
+  background-color: var(--clr-green);
+  color: var(--clr-very-dark-grey);
+  border: 2px solid var(--clr-green);
+  width: 100%;
+  padding: rem(20) 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--clr-very-dark-grey);
+    border: 2px solid var(--clr-green);
+    color: var(--clr-green);
+  }
+
+  &__icon {
+    margin-left: rem(24);
+    color: inherit;
+  }
+}

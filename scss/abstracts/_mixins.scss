@@ -35,6 +35,12 @@ $fs-s: 8;
   }
 }
 
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 // Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
 @function rem($pixels, $context: $fs-l) {
   @return (math.div($pixels, $context)) * 1rem;
