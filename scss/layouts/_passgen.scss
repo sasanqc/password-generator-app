@@ -32,7 +32,9 @@
       color: var(--clr-green);
     }
   }
-
+  &__icon:hover {
+    cursor: pointer;
+  }
   &__strength {
     background-color: var(--clr-very-dark-grey);
     padding: rem(24) rem(32);
